@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EEDC9A; /* Cor de fundo creme suave */
+}
+
+.card-container {
+    width: 450px;
+    height: 250px;
+    perspective: 1500px; /* Profundidade do efeito 3D */
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    cursor: pointer;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+/* Classe que o JS vai adicionar */
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Esconde o verso enquanto gira */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D48400; /* Cor ocre do papel do cartão */
+}
+
+/* FRENTE */
+.card-front {
+    z-index: 2;
+}
+
+.shapes-svg g {
+    stroke: #442200; 
+    stroke-width: 6; 
+}
+
+/* VERSO (ATUALIZADO) */
+.card-back {
+    transform: rotateY(180deg);
+    /* Novo alinhamento centralizado para o verso */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.back-content-centered {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaço entre o ícone e o número */
+}
+
+/* Novo ícone circular idêntico */
+.icon-circle-filled {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: #442200; /* Fundo marrom escuro sólido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Formato exato da casa */
+.house-shape {
+    width: 30px;
+    height: 30px;
+    background-color: #D48400; /* Cor de preenchimento ocre (cor do cartão) */
+    clip-path: polygon(50% 0%, 100% 40%, 100% 100%, 0% 100%, 0% 40%);
+}
+
+.number {
+    font-family: 'Roboto Mono', monospace; /* Fonte monoespaçada fiel */
+    font-size: 32px;
+    font-weight: 700;
+    color: #442200;
+    letter-spacing: 1px;
+}
