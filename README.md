@@ -2,22 +2,22 @@
 
 Um projeto simples de **card com animação 3D flip** inspirado no estilo do Squid Game, usando HTML e CSS.
 
-## ✨ Sobre
+## Sobre
 
 Este projeto demonstra como criar um **card interativo com efeito de rotação 3D**, revelando o verso com um design inspirado em Squid Game.
 
-## 🛠️ Tecnologias
+## Tecnologias
 
 - HTML
 - CSS (transform, transition, perspective)
 
-## 🎯 Funcionalidades
+## Funcionalidades
 
 - Animação 3D no hover
 - Efeito flip
 - Design moderno e interativo
 
-## 🚀 Como usar
+## Como usar
 
 1. Baixe ou clone o repositório  
 2. Abra o arquivo `index.html` no navegador 
